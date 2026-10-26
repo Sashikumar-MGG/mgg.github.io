@@ -33,20 +33,20 @@ const SHOPS = {
     mapEmbed: ""     // BEST: Google Maps > Share > Embed a map > paste ONLY the src="..." link here
   },
   "shop2": {
-    name: "MGG Pharmacy SHOP 2 NAME",
-    shopPhone: "XXXXX XXXXX",
-    address: "SHOP 2 FULL ADDRESS, Coimbatore, Tamil Nadu",
+    name: "MGG Pharmacy Vellalur",
+    shopPhone: "70946 83000",
+    address: "Samritha Towers, Ashoker Street, opp. to Indian Oil Petrol Bunk, ELGI Nagar, Vellalur, Coimbatore, Tamil Nadu 641111",
     hours: "Mon–Sun: 7:00 AM – 11:00 PM",
-    mapsLink: "https://maps.google.com/?q=MGG+Pharmacy+SHOP+2+NAME+Coimbatore",
+    mapsLink: "https://maps.app.goo.gl/NSp9qDwuKdFbLJ4m9",
     mapQuery: "MGG Pharmacy SHOP 2 NAME Coimbatore",
     mapEmbed: ""
   },
   "shop3": {
-    name: "MGG Pharmacy SHOP 3 NAME",
-    shopPhone: "XXXXX XXXXX",
-    address: "SHOP 3 FULL ADDRESS, Coimbatore, Tamil Nadu",
+    name: "MGG Pharmacy Sulur",
+    shopPhone: "70946 84000",
+    address: "No: 35, Trichy Rd, Ranganathapuram, Kannampalayam, Sulur, Tamil Nadu 641402",
     hours: "Mon–Sun: 7:00 AM – 11:00 PM",
-    mapsLink: "https://maps.google.com/?q=MGG+Pharmacy+SHOP+3+NAME+Coimbatore",
+    mapsLink: "https://maps.app.goo.gl/9vF47zZQtzc7MhLt6",
     mapQuery: "MGG Pharmacy SHOP 3 NAME Coimbatore",
     mapEmbed: ""
   }

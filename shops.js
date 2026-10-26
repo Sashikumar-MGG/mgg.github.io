@@ -10,7 +10,7 @@
 /* Same for every shop (change once, applies everywhere) */
 const COMMON = {
   tagline: "Genuine medicines. Home delivery available.",
-  logo: "images/MGG_logo.png",
+  logo: "images/logo/mgg70x70.png",
   orderPhone: "70946 81000",          // also used for WhatsApp
   email: "esi.mgg1808@gmail.com",
   website: "www.mgg.care",

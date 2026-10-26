@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>MGG Pharmacy</title>
+<meta name="description" content="Address, phone numbers, timings, map and photos of MGG Pharmacy.">
+<meta name="theme-color" content="#070b17">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--blue:#4f8cff;--cyan:#5ce1ff;--ink:#f4f7ff;--muted:#9fb0d0;--bg:#070b17;--line:rgba(255,255,255,.12)}
+*{box-sizing:border-box;margin:0}
+body{font-family:'Oswald','Segoe UI',Arial,sans-serif;color:var(--ink);font-weight:400;min-height:100vh;background:radial-gradient(1200px 600px at 50% -10%,#16264d 0%,var(--bg) 60%) fixed;overflow-x:hidden;padding-bottom:env(safe-area-inset-bottom,0)}
+.orb{position:fixed;border-radius:50%;filter:blur(80px);opacity:.45;z-index:0;pointer-events:none}
+.o1{width:320px;height:320px;background:#2f6bff;top:-80px;left:-100px;animation:drift 14s ease-in-out infinite alternate}
+.o2{width:280px;height:280px;background:#19c6ff;bottom:8%;right:-120px;animation:drift 18s ease-in-out infinite alternate-reverse}
+@keyframes drift{to{transform:translate(40px,60px)}}
+main{position:relative;z-index:1;max-width:560px;margin:0 auto;padding:max(48px,env(safe-area-inset-top)) 16px 40px;text-align:center}
+.logo{width:104px;height:104px;border-radius:50%;background:linear-gradient(145deg,#fff,#dfe9ff);display:grid;place-items:center;margin:0 auto;overflow:hidden;font-size:30px;font-weight:500;color:#16264d;box-shadow:0 0 0 3px rgba(92,225,255,.55),0 0 34px 6px rgba(79,140,255,.65),inset 0 -8px 16px rgba(79,140,255,.25)}
+.logo img{width:100%;height:100%;object-fit:contain;padding:8px}
+h1{font-size:25px;font-weight:500;margin:26px 0 6px;letter-spacing:.3px;text-shadow:0 0 22px rgba(92,225,255,.55)}
+.tag{color:var(--muted);font-size:15px;font-weight:300}
+svg{width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.glass,.card{position:relative;background:linear-gradient(150deg,rgba(255,255,255,.14),rgba(255,255,255,.03) 55%);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border:1px solid var(--line);box-shadow:0 10px 40px rgba(0,0,0,.45),0 0 28px rgba(79,140,255,.12),inset 0 1px 0 rgba(255,255,255,.35)}
+.quick{display:flex;justify-content:center;gap:14px;margin:26px 0 20px}
+.quick a{width:54px;height:54px;border-radius:50%;display:grid;place-items:center;color:var(--ink);text-decoration:none;transition:box-shadow .2s,transform .2s}
+.quick a:hover{box-shadow:0 0 26px rgba(92,225,255,.7);transform:translateY(-2px)}
+.btn{position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;gap:8px;width:100%;padding:14px;border:1px solid rgba(255,255,255,.22);border-radius:12px;background:linear-gradient(180deg,rgba(255,255,255,.18),rgba(255,255,255,.05));color:var(--ink);font:inherit;font-size:17px;cursor:pointer;text-decoration:none;margin-bottom:12px;box-shadow:inset 0 1px 0 rgba(255,255,255,.4),0 6px 20px rgba(0,0,0,.35);transition:box-shadow .2s,transform .2s}
+.btn::before{content:"";position:absolute;left:0;right:0;top:0;height:50%;background:linear-gradient(180deg,rgba(255,255,255,.28),rgba(255,255,255,0));pointer-events:none}
+.btn:hover{transform:translateY(-1px);box-shadow:inset 0 1px 0 rgba(255,255,255,.4),0 0 26px rgba(92,225,255,.45)}
+.btn.primary{background:linear-gradient(180deg,#6aa2ff,#2a56d6);border-color:rgba(160,200,255,.7);box-shadow:inset 0 1px 0 rgba(255,255,255,.55),0 0 28px rgba(79,140,255,.65)}
+.card{border-radius:16px;padding:6px 16px;text-align:left;margin:18px 0}
+.row{display:flex;gap:14px;align-items:center;padding:14px 0;border-bottom:1px solid var(--line);color:inherit;text-decoration:none}
+.row:last-child{border-bottom:0}
+.ico{flex:none;width:36px;height:36px;border-radius:50%;background:radial-gradient(circle at 30% 25%,rgba(255,255,255,.35),rgba(79,140,255,.25));display:grid;place-items:center;color:var(--cyan);box-shadow:0 0 14px rgba(79,140,255,.45)}
+.ico svg{width:16px;height:16px}
+.lbl{font-size:12px;color:var(--cyan);font-weight:300;letter-spacing:.3px}
+.val{font-size:16px;line-height:1.35;overflow-wrap:anywhere}
+h2{font-size:18px;font-weight:400;text-align:left;margin:28px 0 12px;text-shadow:0 0 16px rgba(92,225,255,.45)}
+.map{border-radius:16px;overflow:hidden;border:1px solid rgba(160,200,255,.35);box-shadow:0 0 30px rgba(79,140,255,.35),0 10px 40px rgba(0,0,0,.45);background:#0d1630}
+.map iframe{display:block;width:100%;height:300px;border:0}
+.gallery{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 2px 12px;-webkit-overflow-scrolling:touch}
+.gallery button{flex:none;width:78%;max-width:300px;aspect-ratio:4/3;border:1px solid rgba(160,200,255,.35);padding:0;border-radius:14px;overflow:hidden;scroll-snap-align:start;background:#0d1630;cursor:zoom-in;box-shadow:0 0 20px rgba(79,140,255,.3)}
+.gallery img{width:100%;height:100%;object-fit:cover;display:block}
+.link{display:flex;align-items:center;gap:16px;border-radius:12px;padding:12px 12px;margin-bottom:12px;color:inherit;text-decoration:none;font-size:18px;transition:box-shadow .2s}
+.link:hover{box-shadow:0 0 26px rgba(92,225,255,.5)}
+.link svg.brand{width:36px;height:36px;flex:none;stroke:none}
+.link .go{margin-left:auto;color:var(--muted)}
+.lb{position:fixed;inset:0;background:rgba(3,6,14,.92);display:none;place-items:center;z-index:10;padding:16px}
+.lb.on{display:grid}
+.lb img{max-width:100%;max-height:90vh;border-radius:12px;box-shadow:0 0 40px rgba(79,140,255,.5)}
+footer{margin-top:30px;font-size:12px;color:var(--muted);font-weight:300}
+a:focus-visible,button:focus-visible{outline:3px solid var(--cyan);outline-offset:2px}
+@media (prefers-reduced-motion:reduce){.orb{animation:none}*{transition:none!important}}
+
+</style>
+</head>
+<body>
+<div class="orb o1"></div><div class="orb o2"></div>
+<main>
+  <div class="logo" id="logo"></div>
+  <h1 id="name"></h1>
+  <p class="tag" id="tagline"></p>
+
+  <div class="quick" id="quick"></div>
+  <button class="btn" id="addContact"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>Add Contact</button>
+  <a class="btn primary" id="directions" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>Get Directions</a>
+
+  <div class="card" id="details"></div>
+
+  <section><h2>Find us on the map</h2><div class="map"><iframe id="map" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen title="Shop location map"></iframe></div></section>
+
+  <section id="photosWrap"><h2>Our shop</h2><div class="gallery" id="gallery"></div></section>
+  <section id="linksWrap"><h2>Find us on</h2><div id="links"></div></section>
+
+  <footer id="foot"></footer>
+</main>
+<div class="lb" id="lb" role="dialog" aria-label="Photo"><img alt="Shop photo"></div>
+
+<script src="shops.js"></script>
+<script>
+const SLUG = new URLSearchParams(location.search).get("s");
+if(!SHOPS[SLUG]) location.replace("index.html");
+const STORE = Object.assign({photos:[1,2,3].map(n => "images/" + SLUG + "/shop" + n + ".jpg")}, COMMON, SHOPS[SLUG]);
+
+const $ = id => document.getElementById(id);
+const digits = s => s.replace(/\D/g,"");
+const tel = s => "+91" + digits(s).slice(-10);
+const ic = {
+  phone:'<svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>',
+  mail:'<svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>',
+  globe:'<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></svg>',
+  pin:'<svg viewBox="0 0 24 24"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>',
+  clock:'<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>',
+  chat:'<svg viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/></svg>',
+  arrow:'<svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>'
+};
+const brand = {
+  instagram:'<svg class="brand" viewBox="0 0 36 36" aria-hidden="true"><defs><linearGradient id="ig" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#fdc468"/><stop offset=".35" stop-color="#e1306c"/><stop offset=".7" stop-color="#c13584"/><stop offset="1" stop-color="#5851db"/></linearGradient></defs><rect width="36" height="36" rx="9" fill="url(#ig)"/><rect x="9" y="9" width="18" height="18" rx="5" fill="none" stroke="#fff" stroke-width="2"/><circle cx="18" cy="18" r="4.2" fill="none" stroke="#fff" stroke-width="2"/><circle cx="23.3" cy="12.7" r="1.2" fill="#fff"/></svg>',
+  facebook:'<svg class="brand" viewBox="0 0 36 36" aria-hidden="true"><circle cx="18" cy="18" r="18" fill="#3b5998"/><path d="M19.5 29V19.5h3l.5-3.6h-3.5v-2.3c0-1 .3-1.700 1.800-1.700H23V8.700c-.3 0-1.400-.1-2.600-.1-2.600 0-4.400 1.600-4.400 4.500v2.800h-3v3.600h3V29z" fill="#fff"/></svg>',
+  youtube:'<svg class="brand" viewBox="0 0 36 36" aria-hidden="true"><rect y="7" width="36" height="22" rx="6" fill="#ff0000"/><polygon points="14.5,12.5 14.5,23.5 24,18" fill="#fff"/></svg>'
+};
+const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+
+document.title = STORE.name;
+$("name").textContent = STORE.name;
+$("tagline").textContent = STORE.tagline;
+
+/* logo with text fallback */
+const logo = $("logo"), img = new Image();
+img.alt = "MGG logo";
+img.onload = () => logo.appendChild(img);
+img.onerror = () => logo.textContent = "MGG";
+img.src = STORE.logo;
+
+/* quick call / mail buttons */
+$("quick").innerHTML =
+  `<a class="glass" href="tel:${tel(STORE.shopPhone)}" aria-label="Call shop">${ic.phone}</a>` +
+  `<a class="glass" href="mailto:${esc(STORE.email)}" aria-label="Email shop">${ic.mail}</a>`;
+
+/* directions + map */
+$("directions").href = STORE.mapsLink;
+$("map").src = STORE.mapEmbed || ("https://www.google.com/maps?q=" + encodeURIComponent(STORE.mapQuery) + "&output=embed");
+
+/* details rows */
+const rows = [
+  [ic.phone,"Shop",STORE.shopPhone,"tel:"+tel(STORE.shopPhone)],
+  [ic.phone,"Order",STORE.orderPhone,"tel:"+tel(STORE.orderPhone)],
+  [ic.chat,"WhatsApp order",STORE.orderPhone,"https://wa.me/"+tel(STORE.orderPhone).replace("+","")],
+  [ic.mail,"Email",STORE.email,"mailto:"+STORE.email],
+  [ic.globe,"Website",STORE.website,"https://"+STORE.website.replace(/^https?:\/\//,"")],
+  [ic.pin,"Address",STORE.address,STORE.mapsLink],
+  [ic.clock,"Open",STORE.hours,""]
+];
+$("details").innerHTML = rows.filter(r => r[2]).map(r => {
+  const inner = `<span class="ico">${r[0]}</span><span><div class="lbl">${r[1]}</div><div class="val">${esc(r[2])}</div></span>`;
+  return r[3] ? `<a class="row" href="${esc(r[3])}" target="_blank" rel="noopener">${inner}</a>` : `<div class="row">${inner}</div>`;
+}).join("");
+
+/* gallery: skip images that fail to load; hide section if none */
+const lb = $("lb"), lbImg = lb.querySelector("img");
+let shown = 0;
+STORE.photos.forEach((src,i) => {
+  const t = new Image();
+  t.onload = () => {
+    const b = document.createElement("button");
+    b.setAttribute("aria-label","View photo "+(i+1));
+    t.alt = STORE.name + " photo " + (i+1);
+    b.appendChild(t);
+    b.onclick = () => { lbImg.src = src; lb.classList.add("on"); };
+    $("gallery").appendChild(b);
+    shown++;
+  };
+  t.src = src;
+});
+setTimeout(() => { if(!shown) $("photosWrap").style.display = "none"; }, 2500);
+lb.onclick = () => lb.classList.remove("on");
+document.addEventListener("keydown", e => { if(e.key === "Escape") lb.classList.remove("on"); });
+
+/* social links */
+const soc = STORE.social.filter(s => s.url);
+$("links").innerHTML = soc.map(s =>
+  `<a class="link glass" href="${esc(s.url)}" target="_blank" rel="noopener">${brand[s.icon]||''}${esc(s.name)}<span class="go">${ic.arrow}</span></a>`
+).join("");
+if(!soc.length) $("linksWrap").style.display = "none";
+
+/* Add Contact -> downloads a .vcf the phone offers to save */
+$("addContact").onclick = () => {
+  const v = [
+    "BEGIN:VCARD","VERSION:3.0",
+    "FN:"+STORE.name,"ORG:"+STORE.name,
+    "TEL;TYPE=WORK,VOICE:"+tel(STORE.shopPhone),
+    "TEL;TYPE=CELL:"+tel(STORE.orderPhone),
+    "EMAIL;TYPE=WORK:"+STORE.email,
+    "URL:https://"+STORE.website.replace(/^https?:\/\//,""),
+    "ADR;TYPE=WORK:;;"+STORE.address.replace(/,/g,"\\,")+";;;;",
+    "END:VCARD"
+  ].join("\r\n");
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(new Blob([v],{type:"text/vcard"}));
+  a.download = STORE.name.replace(/\W+/g,"-") + ".vcf";
+  document.body.appendChild(a); a.click(); a.remove();
+};
+
+$("foot").textContent = "© " + new Date().getFullYear() + " MGG Pharmacy";
+</script>
+</body>
+</html>

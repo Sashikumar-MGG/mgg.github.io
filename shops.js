@@ -18,13 +18,12 @@ const COMMON = {
     {name:"Instagram", icon:"instagram", url:"https://www.instagram.com/mggcare"},
     {name:"Facebook",  icon:"facebook",  url:"https://www.facebook.com/profile.php?id=61592327267122"},
     {name:"YouTube",   icon:"youtube",   url:"https://www.youtube.com/@MggCare"}
-  ]
-};
+  ]};
 
 /* One block per shop */
 const SHOPS = {
   "varadharajapuram": {
-    name: "MGG Pharmacy Varadharajapuram",
+    name: "VARADHARAJAPURAM - MGG Pharmacy + Polyclinic",
     shopPhone: "70946 82000",
     address: "No. 81, RVL Nagar Main Road,Opp to ESI hospital, Varadharajapuram, Coimbatore, Tamil Nadu 641015",
     hours: "Mon–Sun: 7:00 AM – 11:00 PM",
@@ -33,21 +32,22 @@ const SHOPS = {
     mapEmbed: ""     // BEST: Google Maps > Share > Embed a map > paste ONLY the src="..." link here
   },
   "shop2": {
-    name: "MGG Pharmacy Vellalur",
+    name: "VELLALUR - MGG Pharmacy",
     shopPhone: "70946 83000",
     address: "Samritha Towers, Ashoker Street, opp. to Indian Oil Petrol Bunk, ELGI Nagar, Vellalur, Coimbatore, Tamil Nadu 641111",
     hours: "Mon–Sun: 7:00 AM – 11:00 PM",
-    mapsLink: "https://maps.app.goo.gl/NSp9qDwuKdFbLJ4m9",
+    mapsLink: "https://maps.google.com/?q=MGG+Pharmacy+ELGI+Nagar+Vellalur+Coimbatore",
     mapQuery: "MGG Pharmacy SHOP 2 NAME Coimbatore",
     mapEmbed: ""
   },
   "shop3": {
-    name: "MGG Pharmacy Sulur",
+    name: "SULUR - MGG Pharmacy",
     shopPhone: "70946 84000",
     address: "No: 35, Trichy Rd, Ranganathapuram, Kannampalayam, Sulur, Tamil Nadu 641402",
     hours: "Mon–Sun: 7:00 AM – 11:00 PM",
-    mapsLink: "https://maps.app.goo.gl/9vF47zZQtzc7MhLt6",
+    mapsLink: "https://maps.google.com/?q=MGG+Pharmacy+Kannampalayam+Sulur+Coimbatore",
     mapQuery: "MGG Pharmacy SHOP 3 NAME Coimbatore",
     mapEmbed: ""
   }
+
 };
